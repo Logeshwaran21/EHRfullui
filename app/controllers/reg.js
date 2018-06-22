@@ -69,12 +69,14 @@ export default Controller.extend( {
                         console.log((response));
                         var message = response.message
                         console.log("message", message)
-                        if (message === "Registration` Successful") {
-                            mycontroller.set('message', message)
+                        if (message === "user has been registered successfully") {
+                            alert("Registration successfull");
+                            mycontroller.transitionToRoute('login');
+                            // mycontroller.set('message', message)
                             
-                            var status = response.status
-                            mycontroller.set('usertype', usertype)
-                            console.log(usertype)
+                            // var status = response.status
+                            // mycontroller.set('usertype', usertype)
+                            // console.log(usertype)
                         } else {
                             console.log("else")
                         }

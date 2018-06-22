@@ -14,7 +14,7 @@
                           <form class="login-form">
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="email" id ="loginEmail" class="form-control" valuebinding="email" placeholder="Type your email">
+                                      {{input type="email" id ="loginEmail" class="form-control" valueBinding="email" placeholder="Type your email"}}
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-user"></i>
                                       </span>
@@ -22,7 +22,7 @@
                               </div>
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="password" id ="loginPassword" class="form-control" valuebinding="password" placeholder="Type your password">
+                                      {{input type="password" id ="loginPassword" class="form-control" valueBinding="password" placeholder="Type your password"}}
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-lock"></i>
                                       </span>
@@ -32,75 +32,28 @@
                                 <div class="dropdown">
   <label>Select Category</label>
   
-  {{!-- <div class="dropdown-content">
-    <a href="home" id="doctor" valuebinding="doctor" selected >Doctor</a>
-    <a href="lhome"id="lab" valuebinding="lab">Lab Reporter</a>
-    <a href="phome"id="patient" valuebinding="patient">General User</a>
-  </div> --}}
+ 
   <select class="selectpicker dropbtn" id ="id_of_select">
   <optgroup>
-    <option><a href="home" id="doctor" valuebinding="doctor" selected >Doctor</a></option>
-    <option><a href="lhome"id="lab" valuebinding="lab">Lab Reporter</a></option>
-    <option><a href="phome"id="patient" valuebinding="patient">General User</a></option>
+     <option><a href="home" id="Select" valueBinding="Select" >Select--</a></option> 
+    <option><a href="home" id="doctor" valueBinding="doctor" >Doctor</a></option>
+    <option><a  href="lhome"id="lab" valueBinding="lab">Lab Reporter</a></option>
+    <option><a href="phome"id="patient" valueBinding="patient">General User</a></option>
   </optgroup>
   </select>
 </div>
 <br><br>
-                              {{!-- <div class="checkbox">
-                              <label><input type="checkbox">Remember me next time.</label>
-                              </div> --}}
+                              
                               
                               <div class="form-group sign-btn">
                                   
                                  <button  type="button" id="mylogin"class="btn btn-primary" {{action "Login"}}   >Login</button><br><br>
                                   <button  type="button" id="myreg"class="btn btn-primary" {{action "Register"}}>Register</button>
-                                  {{!-- <p><a href="#" class="forgot">Can't access your account?</a></p>
-                                  <p><strong>New to TimeInfo?</strong><br><a href="#" id="flip-btn" class="signup signup_link">Sign up for a new account</a></p> --}}
-                              </div>
-                          </form>
-                        </div>
-                        <div class="back signup_form" style="opacity: 0;"> 
-                          <p>Sign Up for Your New Account</p>
-                          <form class="login-form">
-                              <div class="form-group">
-                                  <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="Username">
-                                      <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-user"></i>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                <div class="input-group">
-                                  <input type="text" class="form-control">
-                                  <span class="input-group-btn"><button type="button" class="btn btn-cyan"><span class="fa fa-refresh"></span></button></span>
-                                </div>
-                              </div>
-                              <div class="form-group">
-                                  <div class="input-group">
-                                      <input type="password" class="form-control" placeholder="Confirm Password">
-                                      <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-lock"></i>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <div class="input-group">
-                                      <input type="email" class="form-control" placeholder="Email">
-                                      <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-envelope"></i>
-                                      </span>
-                                  </div>
-                              </div>
-                              
-                              <div class="form-group sign-btn">
-                                  <input type="submit" class="btn" value="Sign up">
-                                  <br><br>
                                   
-                                  <p>You have already Account So <a href="#" id="unflip-btn" class="signup">Log in</a></p>
                               </div>
                           </form>
                         </div>
+                       
                     </div>
                 </div>
             </div>
@@ -108,38 +61,6 @@
     </div>
 
     
-    <script>
-        $().ready(function() {
-	$("#card").flip({
-	  trigger: 'manual'
-	});
-});
-
-
-$(".signup_link").click(function() {
-
-	$(".signin_form").css('opacity', '0');
-	$(".signup_form").css('opacity', '100');
-	
-	
-	$("#card").flip(true);
-	
-	return false;
-});
-
-$("#unflip-btn").click(function(){
-  
-	$(".signin_form").css('opacity', '100');
-	$(".signup_form").css('opacity', '0');
-	
-  	$("#card").flip(false);
-	
-	return false;
-	
-});
-</script>
-
-
-
+    
 
 
