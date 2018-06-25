@@ -93,11 +93,11 @@
 				<div class="left-agileits-w3layouts same">
 					<div class="gaps">
 						<p>Patient Name</p>
-						<input type="text" name="Patient Name" placeholder="" required=""/>
+						{{input type="text" name="Patient Name" valueBinding='patientname'placeholder="" required=""}}
 					</div>	
 					<div class="gaps">
 						<p>Last Name</p>
-							<input type="text" name="Last Name" placeholder="" required=""/>
+							{{input type="text" name="Last Name"valueBinding='plastname' placeholder="" required=""}}
 					</div>
 					<div class="gaps">
 						<p>Gender</p>	
@@ -109,48 +109,48 @@
 					</div>
 					<div class="gaps">
 						<p>Date of Birth</p>		
-						<input  id="datepicker1" name="Text" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+						{{input  id="datepicker1" name="Text" type="text" valueBinding='pdob' onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required=""}}
 					</div>
 					<div class="gaps">
-						<p>Home Number</p>
-						<input type="text" name="First Name" placeholder="" required=""/>
+						<p>Email</p>
+						{{input type="text" name="First Name"valueBinding='pemail' placeholder="" required=""}}
 					</div>	
 					
 					<div class="gaps">	
 						<p>Phone Number</p>
-						<input type="text" name="Number" placeholder="" required=""/>
+						{{input type="text" name="Number"valueBinding='pphonenumber' placeholder="" required=""}}
 					</div>
 					<div class="gaps">	
 						<p>Adhaar Number</p>
-						<input type="text" name="Number" placeholder="" required=""/>
+						{{input type="number" name="Number" valueBinding='adhar' placeholder="" required=""}}
 					</div>
 				</div>
 				<div class="right-agileinfo same">
 					<div class="gaps">
 						<p>Occupation</p>
-						<input type="text" name="First Name" placeholder="" required=""/>
+						{{input type="text" name="First Name"valueBinding='occupation' placeholder="" required=""}}
 					</div>
 					<div class="gaps">
 						<p>Blood Group</p>
-						<input type="text" name="First Name" placeholder="" required=""/>
+						{{input type="text" name="First Name"valueBinding='bgroup' placeholder="" required=""}}
 					</div>
 					<div class="gaps">
 						<p>Address</p>
-						<textarea id="message" name="message" placeholder="" title="Please enter Your Comments"></textarea>
+						{{textarea id="message" name="message" valueBinding='paddress' placeholder="" title="Please enter Your Comments"}}
 						</div>
 						<br><br>
 					<div class="gaps">
 						<p>Password</p>
-						<input type="text" name="First Name" placeholder="" required=""/>
+						{{input type="text" name="First Name"valueBinding='ppassword' placeholder="" required=""}}
 					</div>
 					<div class="gaps">	
 						<p>Confirm Password </p>
-						<input type="text" name="Number" placeholder="" required=""/>
+						{{input type="text" name="Number" valueBinding='cppassword' placeholder="" required=""}}
 					</div>
 					
 				</div>
 				<div class="clear"></div>
-				<button type="submit" class="pull-right btn btn-block btn-success">Submit</button>
+				<button type="submit" {{action "PatSubmit"}}class="pull-right btn btn-block btn-success">Submit</button>
 			</form>
 		
    </div>
